@@ -229,16 +229,17 @@ function love.update(dt)
     --
     --
     -- player 1 AI
-    if player1.y + player1.width <= ball.y then
+    --[[
+    if player1.y + player1.width < ball.y then
       player1.dy = PADDLE_SPEED
-    elseif player1.y + player1.width >= ball.y then
+    elseif player1.y + player1.width > ball.y then
       player1.dy = -PADDLE_SPEED
     else
       player1.dy = 0
     end
-
+    ]]
     -- player 1
-    --[[
+   
     if love.keyboard.isDown('w') then
       player1.dy = -PADDLE_SPEED
     elseif love.keyboard.isDown('s') then
@@ -246,14 +247,13 @@ function love.update(dt)
     else
         player1.dy = 0
     end
-    ]]
     
 
     -- player 2 AI
     --
-    if player2.y + player2.width <= ball.y then
+    if player2.y + player2.width < ball.y then
       player2.dy = PADDLE_SPEED
-    elseif player2.y + player2.width >= ball.y then
+    elseif player2.y + player2.width > ball.y then
       player2.dy = -PADDLE_SPEED
     else
       player2.dy = 0
