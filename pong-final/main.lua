@@ -226,18 +226,6 @@ function love.update(dt)
     end
     --
     -- paddles can move no matter what state we're in
-    --
-    --
-    -- player 1 AI
-    --[[
-    if player1.y + player1.width < ball.y then
-      player1.dy = PADDLE_SPEED
-    elseif player1.y + player1.width > ball.y then
-      player1.dy = -PADDLE_SPEED
-    else
-      player1.dy = 0
-    end
-    ]]
     -- player 1
    
     if love.keyboard.isDown('w') then
