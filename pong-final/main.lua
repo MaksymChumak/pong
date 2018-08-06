@@ -250,10 +250,9 @@ function love.update(dt)
     
 
     -- player 2 AI
-    --
-    if player2.y + player2.width < ball.y then
+    if player2.y + player2.width < ball.y - 1.5 then
       player2.dy = PADDLE_SPEED
-    elseif player2.y + player2.width > ball.y then
+    elseif player2.y + player2.width > ball.y + 1.5 then
       player2.dy = -PADDLE_SPEED
     else
       player2.dy = 0
